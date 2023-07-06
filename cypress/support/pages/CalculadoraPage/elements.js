@@ -17,7 +17,7 @@ exports.el = {
     Number8: '#huit',
     Number9: '#neuf',
     SimboloSum: '#addition',
-    simboloMulti: '#multiplier',
+    SimboloMulti: '#multiplier',
     SimboloMenos: '#moins', 
     SimboloDividir: '#diviser',
     SimboloIgual: '#egale',

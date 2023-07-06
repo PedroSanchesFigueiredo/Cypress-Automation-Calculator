@@ -14,14 +14,29 @@ class CalculadoraPage {
         cy.get(el.TextoCalculadora).should('exist')
     }
 
-    CalculadoraSomar() {
-        cy.get(calculadoraNumero(7)).click()
-        cy.get(calculadoraAgregador('Sum')).click()
-        cy.get(calculadoraNumero(8)).click()
-        cy.get(calculadoraAgregador('Igual')).click()
-        cy.get(el.CalculadoraResultado).should('have.text', '15')
+    executarOperacao(numero1, operador, numero2) {
+        cy.get(calculadoraNumero(numero1)).click();
+        cy.get(calculadoraAgregador(operador)).click();
+        cy.get(calculadoraNumero(numero2)).click();
+        cy.get(calculadoraAgregador('Igual')).click();
+      }
+    
+      CalculadoraSomar() {
+        this.executarOperacao(1, 'Sum', 9);
+        cy.get(el.CalculadoraResultado).should('have.text', '10');
+      }
+      CalculadoraSubtrair() {
+        this.executarOperacao(9, 'Menos', 5);
+        cy.get(el.CalculadoraResultado).should('have.text', '4');
     }
-
+      CalculadoraDividir() {
+        this.executarOperacao(9, 'Dividir', 3);
+        cy.get(el.CalculadoraResultado).should('have.text', '3');
+    }
+      CalculadoraMulti() {
+        this.executarOperacao(4, 'Multi', 4);
+        cy.get(el.CalculadoraResultado).should('have.text', '16');
+    }
 }
 
 function calculadoraNumero(numero) {
@@ -33,11 +48,11 @@ function calculadoraNumero(numero) {
 }
 
 
-function calculadoraAgregador(agregador) {
+function calculadoraAgregador(operador) {
     let i = 0;
     const operadores = ['Sum', 'Multi', 'Menos', 'Dividir', 'Igual'];
     while (i < operadores.length) {
-        if (agregador === operadores[i]) {
+        if (operador === operadores[i]) {
             return el["Simbolo" + operadores[i]];
         }
         i++;

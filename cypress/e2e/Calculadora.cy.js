@@ -1,5 +1,5 @@
 /// <reference types="cypress" />
-
+const { CalculadoraSomar, CalculadoraSubtrair } = require('../support/pages/CalculadoraPage/index');
 import "cypress-localstorage-commands"
 import CalculadoraPage from '../support/pages/CalculadoraPage'
 
@@ -8,11 +8,18 @@ describe('Calculadora', () => {
         cy.visit('https://www.calculadora-online.xyz')
     })
     it('Smoke da Tela', () => {
-        CalculadoraPage.smokeCalculadora()
+        CalculadoraPage.smokeCalculadora();
     })
-    it.only('7 + 8 ', () => {
-        CalculadoraPage.CalculadoraSomar()
+    it('5 - 5 ', () => {
+        CalculadoraPage.CalculadoraSubtrair();
     })
-    
-    
+    it('9 + 9', () => {
+        CalculadoraPage.CalculadoraSomar();
+    })
+    it('5 / 5', () => {
+        CalculadoraPage.CalculadoraDividir();
+    })
+    it('4 * 4', () => {
+        CalculadoraPage.CalculadoraMulti();
+    })
 })
