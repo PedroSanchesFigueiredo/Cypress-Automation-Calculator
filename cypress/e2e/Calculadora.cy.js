@@ -10,8 +10,9 @@ describe('Calculadora', () => {
     it('Smoke da Tela', () => {
         CalculadoraPage.smokeCalculadora()
     })
-    it.only('Soma de dois numeros', () => {
+    it.only('7 + 8 ', () => {
         CalculadoraPage.CalculadoraSomar()
     })
+    
     
 })

@@ -7,9 +7,24 @@ exports.el = {
     BTMenuConvers: 'nav > :nth-child(6)',
     Calculadora: '#calculatrice_simple',
     TituloCalculadora: '#titre_machine',
+    Number1: '#un',
+    Number2: '#deux',
+    Number3: '#trois',
+    Number4: '#quatre',
+    Number5: '#cinq',
+    Number6: '#six',
     Number7: '#sept',
     Number8: '#huit',
-    CalculadoraSimboloMais: '#addition',
-    CalculadoraSimboloIgual: '#egale'
+    Number9: '#neuf',
+    SimboloSum: '#addition',
+    simboloMulti: '#multiplier',
+    SimboloMenos: '#moins', 
+    SimboloDividir: '#diviser',
+    SimboloIgual: '#egale',
+
+
+
+    TextoCalculadora: '#Information_calculatrice',
+    CalculadoraResultado: '#total'
 }
 
