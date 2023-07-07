@@ -21,9 +21,6 @@ exports.el = {
     SimboloMenos: '#moins', 
     SimboloDividir: '#diviser',
     SimboloIgual: '#egale',
-
-
-
     TextoCalculadora: '#Information_calculatrice',
     CalculadoraResultado: '#total'
 }

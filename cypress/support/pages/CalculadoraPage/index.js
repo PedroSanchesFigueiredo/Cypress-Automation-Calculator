@@ -19,21 +19,21 @@ class CalculadoraPage {
         cy.get(calculadoraAgregador(operador)).click();
         cy.get(calculadoraNumero(numero2)).click();
         cy.get(calculadoraAgregador('Igual')).click();
-      }
+    }
     
-      CalculadoraSomar() {
+    CalculadoraSomar() {
         this.executarOperacao(1, 'Sum', 9);
         cy.get(el.CalculadoraResultado).should('have.text', '10');
       }
-      CalculadoraSubtrair() {
+    CalculadoraSubtrair() {
         this.executarOperacao(9, 'Menos', 5);
         cy.get(el.CalculadoraResultado).should('have.text', '4');
     }
-      CalculadoraDividir() {
+    CalculadoraDividir() {
         this.executarOperacao(9, 'Dividir', 3);
         cy.get(el.CalculadoraResultado).should('have.text', '3');
     }
-      CalculadoraMulti() {
+    CalculadoraMulti() {
         this.executarOperacao(4, 'Multi', 4);
         cy.get(el.CalculadoraResultado).should('have.text', '16');
     }
